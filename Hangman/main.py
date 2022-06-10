@@ -41,7 +41,8 @@ def main():
         if guess in word_characters:
             print("Your letter was in the word!")
             word_characters.remove(guess)
-            print(word_characters)
+            if word_characters == 0:
+                print("You won!")
         else:
             print("That letter is not in the word")
             incorrect_guesses += 1
